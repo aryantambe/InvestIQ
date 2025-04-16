@@ -25,7 +25,7 @@ Welcome to *InvestIQ, a smart and interactive web app built using **Streamlit, *
 | *Pandas / NumPy* | Data processing |
 | *Scikit-learn* | Model training & evaluation |
 | *HTML/CSS* | Custom styling |
-|*Power BI* | (Optional) Visual analytics dashboard |
+|*Power BI* | Visual analytics dashboard |
 
 ---
 
