@@ -25,4 +25,29 @@ Welcome to *InvestIQ, a smart and interactive web app built using **Streamlit, *
 | *Pandas / NumPy* | Data processing |
 | *Scikit-learn* | Model training & evaluation |
 | *HTML/CSS* | Custom styling |
-| *Power BI* | (Optional) Visual analytics dashboard |
+|*Power BI* | (Optional) Visual analytics dashboard |
+
+---
+
+## 🧪 Model Details
+
+- *Algorithm:* Logistic Regression
+- *Preprocessing:* One-Hot Encoding for categorical features, Standard Scaling for numerical
+- *Target Variable:* Profitable (0 or 1)
+- *Input Features:*
+  - Amount_in_USD
+  - Industry_Vertical
+  - City__Location
+  - InvestmentnType
+
+---
+
+## 📁 Dataset
+
+- The dataset used is a cleaned version of Indian startup funding records.
+- Columns include startup names, cities, industries, investor names, funding amounts, and investment types.
+- Missing values handled and new Profitable target generated for binary classification.
+
+---
+Thankyou!
+
