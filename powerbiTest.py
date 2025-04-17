@@ -174,69 +174,17 @@ def about_page():
     st.markdown("""
     <div style="font-size:18px;">
     Welcome to InvestIQ – your intelligent gateway to data-driven startup investment decisions.
-
-    ---
     
-    🧠 **What** **is** **InvestIQ**?
-
-    InvestIQ is the result of an academic and industry-relevant project that analyzes startup funding trends in India using **Python for data analysis** and **Power BI for visualization**.
-
-    In a rapidly evolving startup ecosystem, investors often face challenges in identifying truly profitable ventures amidst the noise.
-
-    ---
-    
-    📊 **What InvestIQ Offers**
-
-    Our interactive dashboards provide valuable insights such as:
-
-    - 🚀 **Top-performing industries and cities**
-    - 💰 **Relationship between funding amount and profitability**
-    - 🌟 **Hidden gems** (low investment, high return startups)
-    - 🤝 **Investor collaboration patterns**
-    - 📂 **Portfolio diversification insights**
-
-    ---
-
-    🎯 **Our Mission**
-
-    Our goal is to **empower investors** with clear, actionable insights that **reduce risk** and **enhance return on investment**.
-
-    InvestIQ is built on the belief that **smart investments begin with smart data**.
-
-    ---
-
-    👥 **Who Is It For?**
-
-    Whether you're:
-
-    - An **aspiring investor**
-    - A **data enthusiast**
-    - A **founder** looking to understand the funding landscape
-
-    **InvestIQ brings powerful insights to your fingertips.**
-
-    ---
+    InvestIQ combines <b>Python-based analysis</b> and <b>Power BI visualization</b> to deliver insights that help investors make smarter decisions.
     </div>
     """, unsafe_allow_html=True)
 
-def powerbi_dashboard_redirect():
+def powerbi_dashboard():
     st.markdown('<div class="title-style fade-in">📈 Power BI Dashboard</div>', unsafe_allow_html=True)
-    st.markdown("Click the button below to open the Power BI Dashboard in a new tab.")
-
-    powerbi_url = "https://app.powerbi.com/reportEmbed?reportId=1555644a-376a-41a4-a724-ff5ae4a73916&autoAuth=true&ctid=23035d1f-133c-44b5-b2ad-b3aef17baaa1"
-
-    st.markdown(f"""
-        <a href="{powerbi_url}" target="_blank">
-            <button style="
-                background-color: #6c63ff;
-                color: white;
-                padding: 10px 24px;
-                font-size: 16px;
-                border: none;
-                border-radius: 8px;
-                cursor: pointer;
-            ">🚀 Open Dashboard</button>
-        </a>
+    st.markdown("""
+        <iframe title="InvestIQ Power BI" width="100%" height="650" 
+        src="https://app.powerbi.com/reportEmbed?reportId=1555644a-376a-41a4-a724-ff5ae4a73916&autoAuth=true&ctid=23035d1f-133c-44b5-b2ad-b3aef17baaa1" 
+        frameborder="0" allowFullScreen="true"></iframe>
     """, unsafe_allow_html=True)
 
 def logout():
@@ -270,7 +218,7 @@ def main():
             login_page()
     elif page == "Power BI Dashboard":
         if st.session_state.logged_in:
-            powerbi_dashboard_redirect()
+            powerbi_dashboard()
         else:
             st.warning("Please log in first.")
             login_page()
